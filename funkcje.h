@@ -19,4 +19,9 @@ void dodajMecha(Wezel **glowa);
 void wyswietlWszystkie(Wezel *glowa);
 void zwolnijPamiec(Wezel **glowa);
 
+void zapiszDoPliku(Wezel *glowa, const char *nazwaPliku);
+void wczytajZPliku(Wezel **glowa, const char *nazwaPliku);
+void wyszukajPoModelu(Wezel *glowa);
+void usunMecha(Wezel **glowa);
+
 #endif
