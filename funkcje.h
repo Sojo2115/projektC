@@ -2,11 +2,11 @@
 #define FUNKCJE_H
 
 typedef struct {
-    char model[100];
+    char model[100];      
     char klasa[50];
-    float moc;
+    float moc;           
     char pilot[100];
-    char stan[50];
+    char stan[50];       
 } Mech;
 
 typedef struct Wezel {
@@ -14,14 +14,25 @@ typedef struct Wezel {
     struct Wezel *nastepny;
 } Wezel;
 
-void wyswietlMenu();
-void dodajMecha(Wezel **glowa);
-void wyswietlWszystkie(Wezel *glowa);
-void zwolnijPamiec(Wezel **glowa);
+// --- DEKLARACJE FUNKCJI ---
 
-void zapiszDoPliku(Wezel *glowa, const char *nazwaPliku);
+void wyswietlMenu();
+
+void dodajMecha(Wezel **glowa);
 void wczytajZPliku(Wezel **glowa, const char *nazwaPliku);
-void wyszukajPoModelu(Wezel *glowa);
-void usunMecha(Wezel **glowa);
+void zapiszDoPliku(Wezel *glowa, const char *nazwaPliku);
+
+void wyswietlWszystkie(Wezel *glowa);
+void wyszukajPoModelu(Wezel *glowa);      
+void wyszukajPowyzejMocy(Wezel *glowa);   
+
+void usunMecha(Wezel **glowa);           
+void usunWszystkieWDemontazu(Wezel **glowa); 
+void edytujMecha(Wezel *glowa);
+
+void sortujPoModelu(Wezel *glowa);
+void sortujPoMocy(Wezel *glowa);
+
+void zwolnijPamiec(Wezel **glowa);
 
 #endif
